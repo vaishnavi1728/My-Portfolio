@@ -1,0 +1,289 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: #080808;
+}
+/* #Header{
+    width:100%;
+    height:100vh;
+    background-image: url(backgroung.png); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+    /* margin-top: 100px;
+    margin-left: 900px; 
+}  */
+
+h1{
+    font-size: 60px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    color:rgb(222, 48, 48);
+    }
+
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    margin:10px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    width:0px;
+    height:3px;
+    background-color:rgb(222, 48, 48);
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after {
+     width: 100%; /* Ensure the underline expands on hover */
+}
+.rows{
+    display:flex;
+}
+.column1{
+    color: #8a7a7a;
+    margin-top:14%;
+    font-size:33px;
+}
+.column2 img{
+    width:380px; 
+    height:450px; 
+    border-radius: 15px; 
+    margin-left: 55px; 
+    margin-top:30px;
+}
+.cont{
+    color: #8a7a7a;
+    padding: 50px 10%;
+}
+.row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 30%;
+}
+.col2{
+    flex-basis: 60%;
+}
+.title{
+    color:#8a7a7a;
+    display: flex;
+    margin: 20px 0 40px;
+}
+.link{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+}
+.link::after{
+    content: "";
+    width:0;
+    height:3px;
+    background-color:rgb(222, 48, 48);
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+    transition:0.3s;
+}
+.link.active-link::after{
+    width:50%;
+}
+
+.contents ul li{
+    list-style: none;
+    font-size: 16px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 10px 0;
+}
+.contents ul li span{
+    color:rgb(222, 48, 48);
+}
+.contents{
+    display: none;
+}
+.contents.active{
+    display:block;
+}
+
+/* ....Projects.... */
+.my-projects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:150px;
+    margin-top: 40px;
+}
+p{
+    font-size:18px;
+}
+.my-projects div{
+    background-color:rgb(33, 37, 37);
+    padding:30px;
+    border-radius:10px;
+    font-size: 13px;
+    font-weight: 200;
+    transition: background 0.5s, transform 0.5s;
+} 
+.my-projects div i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.my-projects div a{
+    margin-top: 20px;
+    font-size: 16px;
+    color:#fff;
+    display: inline-block;
+}
+.my-projects div:hover{
+    background-color:rgb(132, 56, 56)   ;
+    transform: translateY(-10px);
+
+}
+
+/* My Projects */
+
+.proj-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap:150px;
+    margin-top: 40px;
+} 
+
+.proj1{
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 350px;
+    margin: 20px;
+}
+.proj1 img{
+    height:350px;
+    width:350px; 
+    border-radius:10px;
+    display:block;
+    transition: transform 0.5s;
+  }
+.para{
+    width:100%;
+    height:0;
+    background:linear-gradient(rgba(0,0,0,0.4), #843838);
+    border-radius: 10px;
+    position: absolute;
+    left:0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color:beige;
+    transform: height 0.5s;
+} 
+.para h3{
+    margin-bottom: 20px;
+}
+.para p{
+    font-size: 16px;
+}
+.para a{
+    color:beige;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 40px;
+    background-color:rgb(56, 51, 51);
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+.proj1:hover img{
+    transform: scale(1.1);
+}
+.proj1:hover .para{
+    height:100%;
+}
+.button{
+    display: block;
+    margin:50px auto;
+    width:fit-content;
+    padding: 14px 50px;
+    border: 2px solid #843838;
+    color: beige;
+    transition: background 0.5s;
+    border-radius: 5px;
+}
+.button:hover{
+    background: #843838;
+}
+
+
+/* ..........Contact........ */
+.cont-left{
+    flex-basis: 40%;
+}
+.cont-right{
+    flex-basis: 60%;
+}
+.cont-left p{
+    margin-top: 30px;
+    font-size:18px ;
+}
+i{
+    margin-right:30px;
+    font-size: 25px;
+}
+.cont-right{
+    width:100%;
+}
+form input, form textarea{
+    width:100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 15px;
+    margin:15px;
+    background-color:rgb(56, 51, 51) ;
+    color: #fff;
+    font-size: 18px;
+}
+
+.copyright{
+    width:100%;
+    text-align: center;
+    color:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    padding:20px;
+    background: rgb(56, 51, 51);
+}
+
+/* ---------css for small screen--- */
+/* @media only screen and (max-width: 600px){
+    .column img{
+        
+    }
+    .coulmn1{
+        margin-top: 100%;
+        font-size:16px;
+    }
+
+} */
